@@ -60,16 +60,10 @@ print("['c', 'a', 'c', 'a', 'a', 'a', 'a', 'c', 'ac', 'c', 'a', 'a', 'c']")
 ```python
 import re
 mystring = "Hello!! Good Morning, Welcome to python tutorial class 24."
-c=-1
-for m in range(len(mystring)):
-	if mystring[m]=='e':
-		print("e")
-	if mystring[m]=='o':
-		if mystring[m+1]=='o':
-			print("oo")
-			c=m+1
-		elif m!=c:
-			print("o")	
+mathches = re.findall(r"e|o|oo",mystring)
+
+for m in matches:
+    print(m)
 ```
 
 ## Q7
